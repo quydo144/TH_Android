@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="80sp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10sp"
+        android:text="Exit"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Spinner
+        android:id="@+id/spinner_sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exit" />
+
+    <EditText
+        android:id="@+id/masp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Mã sản phẩm"
+        android:ems="7"
+        android:layout_marginTop="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_sp"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <EditText
+        android:id="@+id/tensp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:hint="Tên sản phẩm"
+        android:layout_marginTop="15dp"
+        android:ems="12"
+        app:layout_constraintStart_toEndOf="@+id/masp"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_sp" />
+
+    <EditText
+        android:id="@+id/soluong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:hint="Số lượng"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/masp" />
+
+    <EditText
+        android:id="@+id/dongia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/soluong"
+        android:layout_marginTop="5sp"
+        android:hint="Đơn giá"
+        android:inputType="numberDecimal"/>
+
+    <LinearLayout
+        android:id="@+id/crud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/dongia"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:text="Save"/>
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:text="Delete"/>
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:text="Update"/>
+
+    </LinearLayout>
+
+
+
+    <ListView
+        android:id="@+id/list_item_sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/crud"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
